@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+djangorestframework = "*"
+django-rest-knox = "*"
+channels = {extras = ["daphne"], version = "*"}
+google-auth = "*"
+django-filter = "*"
+django-cors-headers = "*"
+django-phonenumber-field = {extras = ["phonenumbers"], version = "*"}
+requests = "*"
+faker = "*"
+django-admin-interface = "*"
+opencv-python = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

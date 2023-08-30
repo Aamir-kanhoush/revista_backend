@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Revista Stats</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin-top:0;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 0;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav{
+        background : #aa333d;
+      }
+
+      h1{
+        font-family: Arial, sans-serif;
+        color:white;
+        margin-left: 30px;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+        }
+    l{
+        list-style-type: none;  
+        display:flex;
+        flex-direction: row;
+        padding-left: 10px;
+    }
+    li{
+        color:white;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   width: 290px;
+    margin: 0px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color:none;
+    }
+    li:hover{
+        background-color:grey;
+
+    }
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#aa333d;
+        color:#FFF;
+        border-radius:50px;
+        text-align:none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+    .float2{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        left: 40px;
+        background-color:#aa333d;
+        color:#FFF;
+        border-radius:50px;
+        text-align:none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 3px #999;
+    }
+</style>
+<script>
+    function navigate(url){
+        if (url) {
+          window.location.href = url;
+        }
+      }
+</script>
+<body>
+    <div class="nav">
+        <h1 >Revista Stats</h1>
+        <nav>
+            <l>
+                <li onclick="navigate('{% url "Age" %}')">Age</li>
+                <li onclick="navigate('{% url "Gender" %}')">Gender</li>
+                <li onclick="navigate('{% url "Trending topics" %}')">Trending topics</li>
+                <li onclick="navigate('{% url "Topics activity" %}')">Topics activity</li>
+                <li onclick="navigate('{% url "Topics followings" %}')">Topics followings</li> 
+            </l>
+        </nav>
+    </div>
+    <div class=float onclick="navigate('{% url 'report' %}')">report</div>
+    <div class=float2 onclick="navigate('/admin/')"">Admin</div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
