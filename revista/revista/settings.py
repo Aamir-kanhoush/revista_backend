@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-x@k+up4am2(itp#bl_7j^fe96kb+q7f^)o5%zw+*sb71#9&c-j
 #     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 DEBUG = True
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
